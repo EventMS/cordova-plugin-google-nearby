@@ -101,7 +101,7 @@ public class NearbyPlugin extends CordovaPlugin {
         Nearby.getMessagesClient(cordova.getActivity()).publish(mActiveMessage, options).addOnFailureListener(this.failListener);
         Log.d(TAG, "published message: " + message);
         this.publish_callback.success("published message");
-        setTimeout(() -> this.unPublish(), 500);
+        setTimeout(() -> this.unPublish(), 1000);
 
     }
 
